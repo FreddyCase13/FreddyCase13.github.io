@@ -3,12 +3,10 @@
  * Author:   Freddy Case
  * Version:  1.0
  * Date:     September 2026 (CS 499 enhancement)
- * Original: CS 330 Computational Graphics and Visualization, September, 2026
- *
- * Purpose:  Declares the mouse pad object.
- * 
  * New File: Added as a 7th object to show that a new object can be added easily
  *			 without any changes to RenderScene.
+ *
+ * Purpose:  Declares the mouse pad object.
  */
 #pragma once
 

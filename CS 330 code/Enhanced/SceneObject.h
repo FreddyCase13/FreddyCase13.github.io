@@ -3,7 +3,7 @@
  * Author:   Freddy Case
  * Version:  1.0
  * Date:     September 2026 (CS 499 enhancement)
- * Original: CS 330 Computational Graphics and Visualization, Februaryfdr fv, 2026
+ * Original: CS 330 Computational Graphics and Visualization, February, 2026
  *
  * Purpose:  Abstract base class for every object drawn in the 3D scene.
  *           Defines the Draw() function that each object must override.

@@ -3,11 +3,10 @@
  * Author:   Freddy Case
  * Version:  1.0
  * Date:     September 2026 (CS 499 enhancement)
- *
- * Purpose:  Draws the mouse pad under the mouse using a box mesh and a solid color.
- * 
  * New File: Added as a 7th object to show that a new object can be added easily
  *			 without any changes to RenderScene.
+ * 
+ * Purpose:  Draws the mouse pad under the mouse using a box mesh and a solid color.
  */
 # include "MousePad.h"
 # include "SceneManager.h"
