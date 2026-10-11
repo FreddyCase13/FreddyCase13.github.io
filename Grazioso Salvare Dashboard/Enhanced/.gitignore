@@ -1,0 +1,11 @@
+# Files that get ignored when uploading to github
+
+# environment file with username and password
+.env
+
+# virtual environments
+.venv/
+.venv-1/
+
+# Python cache files
+__pycache__/
