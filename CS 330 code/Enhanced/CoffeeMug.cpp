@@ -1,5 +1,5 @@
 /*
- * File:     CofeeMug.cpp
+ * File:     CoffeeMug.cpp
  * Author:   Freddy Case
  * Version:  1.0
  * Date:     September 2026 (CS 499 enhancement)
