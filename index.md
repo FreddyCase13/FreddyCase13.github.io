@@ -9,3 +9,6 @@ Welcome to my ePortfolio for CS 499, the Computer Science capstone at Southern N
 
 ## Contents
 - [Code Review](./code-review)
+- [Software Design and Engineering: CS 330 3D Desk Scene](software-design)
+- [Algorithms and Data Structures: CS 300 Course Planner](algorithms)
+- [Databases: CS 340 Grazioso Salvare Dashboard](databases)
