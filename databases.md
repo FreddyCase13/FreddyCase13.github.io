@@ -24,7 +24,7 @@ While enhancing this artifact, I fixed the map, which crashed when some animals 
 
 ## Course Outcomes
 
-For this artifact enhancement, I originally planned on meeting outcomes four and five and I believe that I met both. For outcome four I used standard database practices by adding an aggregation pipeline and by utilizing indexing. I also made sure to measure the improvement so that I was certain that improvements were made. For outcome five, I removed hardcoded credentials and applied the principle of least privilege by adding a read-only account. I also turned on access control so that those permissions are enforced and kept sensitive information out of the public repository by utilizing a .gitignore file
+For this artifact enhancement, I originally planned on meeting outcomes four and five and I believe that I met both. For outcome four I used standard database practices by adding an aggregation pipeline and by utilizing indexing. I also made sure to measure the improvement so that I was certain that improvements were made. For outcome five, I removed hardcoded credentials and applied the principle of least privilege by adding a read-only account. I also turned on access control so that those permissions are enforced and kept sensitive information out of the public repository by utilizing a .gitignore file.
 
 ## Reflection
 
