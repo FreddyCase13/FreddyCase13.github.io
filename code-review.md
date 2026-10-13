@@ -10,14 +10,17 @@ In this code review, I walk through three projects from my Computer Science prog
 
 ## Software Design and Engineering
 **3D OpenGL Scene (CS 330)**
-A C++ desk scene rendered in OpenGL. The review covers a "SceneManager" class that handles every object by name, and my plan to move all objects under a shared base class.
+
+A 3D desk scene written in C++ and rendered in OpenGL. The review covers a "SceneManager" class that handles every object by name, and my plan to move all objects under a shared base class.
 
 ## Algorithms and Data Structures
 **Course Planner (CS 300)**
+
 A C++ program that loads courses into a binary search tree. The review covers the code of an unbalanced tree and a search bug, plus my plan to build and benchmark a hash table against it.
 
 ## Databases
 **Grazioso Salvare Dashboard (CS 340)**
+
 A Python and MongoDB dashboard for a fictional animal rescue. The review covers issues like hardcoded database credentials and inefficient queries, and my plan to fix both.
 
 [Back to Home](./)
