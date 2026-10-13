@@ -6,7 +6,66 @@ title: Databases
 
 [Back to Home](./)
 
-**Code:** [Original](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/Grazioso%20Salvare%20Dashboard/Original) | [Enhanced](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/Grazioso%20Salvare%20Dashboard/Enhanced)
+## Code
+
+### Key Change: Before and After
+
+**Before:** The database username and password were written directly in the dashboard code, in a public repository. The password has since been changed and is shown here as REDACTED.
+
+```python
+username = "aacuser"
+password = "REDACTED"
+
+# Connect to database via CRUD Module
+db = AnimalShelter(username, password)
+```
+
+**After:** Credentials are loaded from a .env file that is never uploaded, and the dashboard connects with a read-only account.
+
+```python
+load_dotenv()
+
+# Load the read-only AAC Reader credentials
+username = os.getenv("AAC_READ_USER")
+password = os.getenv("AAC_READ_PASS")
+
+if not username or not password:
+    raise ValueError("Missing AAC_READ_USER or AAC_READ_PASS in the .env file")
+
+# Connect with the read-only account
+db = AnimalShelter(username, password)
+```
+
+**Breed counts now run inside MongoDB** with an aggregation pipeline, instead of sending every record to Python:
+
+```python
+pipeline = [
+    {"$match": query},
+    {"$group": {"_id": "$breed", "count": {"$sum": 1}}},
+    {"$sort": {"count": -1}},
+    {"$limit": limit},
+]
+```
+
+### Index Results (Water Rescue Filter)
+
+| | Documents Examined | Matches Returned |
+|---|---|---|
+| Before index | 10,000 | 17 |
+| After index | 17 | 17 |
+
+### Enhanced Files
+
+- [ProjectTwoDashboard.ipynb](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/Grazioso%20Salvare%20Dashboard/Enhanced/ProjectTwoDashboard.ipynb) - Interactive dashboard that filters AAC shelter animals by their rescue type. Shows the results in a table, breed chart, and map.
+- [CRUD_Python_Module.py](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/Grazioso%20Salvare%20Dashboard/Enhanced/CRUD_Python_Module.py) - Create, read, update, and delete operations for the AAC MongoDB collection. Added a breed count aggregation pipeline.
+- [setup_indexes.py](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/Grazioso%20Salvare%20Dashboard/Enhanced/setup_indexes.py) - A one-time setup script that creates the index used by the rescue filters by using the admin account.
+- [.env.example](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/Grazioso%20Salvare%20Dashboard/Enhanced/.env.example) - Template showing which credentials the project needs with placeholder values.
+- [.gitignore](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/Grazioso%20Salvare%20Dashboard/Enhanced/.gitignore) - Keeps the real .env file and local environment folders out of GitHub.
+
+### Original Files
+
+- [ProjectTwoDashboard.ipynb](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/Grazioso%20Salvare%20Dashboard/Original/ProjectTwoDashboard.ipynb) - The original CS 340 dashboard.
+- [CRUD_Python_Module.py](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/Grazioso%20Salvare%20Dashboard/Original/CRUD_Python_Module.py) - The original CRUD module.
 
 ## Artifact Description
 
@@ -31,3 +90,5 @@ For this artifact enhancement, I originally planned on meeting outcomes four and
 In my opinion, the hardest part of enhancing this artifact was turning on access control within MongoDB. After turning on security and editing the configuration file, the database server wouldn’t start and Compass stopped working. Initially I thought that my data was gone within the database. It turned out that I hadn’t properly implemented the security setting within the databases files, which caused MongoDB to not read the file properly and not start at all. I also learned in this process that I needed to create an internal admin account before turning on the access control, or I could have locked myself out of managing the database completely. If I were to enhance this app further, I would turn it into a full stack application, similar to the MEAN stack app I built in CS 465. A backend API would sit between the dashboard and MongoDB, so the frontend would never connect to the database. Users would log in with their own accounts and have different roles, like basic users who can read only or admins that can edit records.
 
 When I first built this dashboard, I did not know as much as I know now about secure coding, aggregation pipelines, indexing, user roles, or how to run an app through a database. I have learned a lot since then, and going back to this project showed me how much I have grown during the program. It is also a reminder that I still have a lot to learn in terms of software engineering and that getting to this point in my software engineering journey is just the beginning.
+
+
