@@ -8,7 +8,49 @@ title: Software Design and Engineering
 
 ![CS 330 3D desk scene running](CS%20330%20code/scene.png)
 
-**Code:** [Original](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/CS%20330%20code/Original) | [Enhanced](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/CS%20330%20code/Enhanced)
+## Code
+
+### Key Change: Before and After
+
+**Before:** RenderScene created and drew every object by hand, one block per object.
+
+```cpp
+Desk myDesk;
+myDesk.Draw(this);
+
+CoffeeMug myMug;
+myMug.Draw(this);
+
+Monitor myMonitor;
+myMonitor.Draw(this);
+// ...one block for every object
+```
+
+**After:** every object inherits from SceneObject, so one loop draws them all.
+
+```cpp
+for (const auto& sceneObject : m_sceneObjects) {
+    sceneObject->Draw(this);
+}
+```
+
+### Enhanced Files
+
+- [SceneObject.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/SceneObject.h) - Abstract base class every object inherits from
+- [SceneManager.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/SceneManager.cpp) - Creates the objects once and draws them in one loop
+- [SceneManager.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/SceneManager.h) - Declares the class that loads textures, sets up lights, and draws the scene
+- [CoffeeMug.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/CoffeeMug.h) - Declares the coffee mug object
+- [Desk.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/Desk.h) - Declares the desk object
+- [Laptop.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/Laptop.h) - Declares the laptop object
+- [Monitor.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/Monitor.h) - Declares the monitor object
+- [Mouse.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/Mouse.h) - Declares the mouse object
+- [Notebook.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/Notebook.h) - Declares the notebook object
+- [MousePad.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/MousePad.h) - Declares the mouse pad object
+- [MousePad.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/Enhanced/MousePad.cpp) - Draws the mouse pad under the mouse using a box mesh and a solid color
+
+### Original Files
+
+- [Original code folder](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/CS%20330%20code/Original) - The CS 330 version before the enhancement
 
 ## Artifact Description
 
