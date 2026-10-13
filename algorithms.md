@@ -6,7 +6,75 @@ title: Algorithms and Data Structures
 
 [Back to Home](./)
 
-**Code:** [Original](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/CS300%20Course%20Planner/Original) | [Enhanced](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/CS300%20Course%20Planner/Enhanced)
+## Code
+
+### Key Change: Before and After
+
+**Before:** Insert called itself once for every level of the tree. With 2,000 sorted courses the tree was 2,000 levels deep, and the program crashed with a stack overflow.
+
+```cpp
+void BinarySearchTree::addNode(Node* node, Course course) {
+    if (node->course.courseId.compare(course.courseId) > 0) {
+        if (node->left == nullptr) {
+            node->left = new Node(course);
+        }
+        else {
+            this->addNode(node->left, course);   // recursive call
+        }
+    }
+    else {
+        if (node->right == nullptr) {
+            node->right = new Node(course);
+        }
+        else {
+            this->addNode(node->right, course);  // recursive call
+        }
+    }
+}
+```
+
+**After:** Insert walks down the tree with a loop, so it uses the same memory no matter how deep the tree gets.
+
+```cpp
+Node* current = root;
+while (true) {
+    if (current->course.courseId.compare(course.courseId) > 0) {
+        if (current->left == nullptr) {
+            current->left = newNode;
+            return;
+        }
+        current = current->left;
+    }
+    else {
+        if (current->right == nullptr) {
+            current->right = newNode;
+            return;
+        }
+        current = current->right;
+    }
+}
+```
+
+### Benchmark Results (Search Time)
+
+| Test | BST | Hash Table |
+|---|---|---|
+| 2,000 courses, sorted order | 116,021 µs | 4,852 µs |
+| 2,000 courses, random order | 7,514 µs | 5,217 µs |
+
+### Enhanced Files
+
+- [CourseStore.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/CourseStore.h) - Abstract base class with Insert, Search, and Remove so the BST and hash table can be tested with the same code
+- [HashTable.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/HashTable.h) - Declares the hash table that stores courses using separate chaining
+- [HashTable.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/HashTable.cpp) - Inserts, searches, and removes courses in the hash table using 179 buckets and a multiply-by-31 hash
+- [BinarySearchTree.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/BinarySearchTree.h) - Declares the binary search tree that stores courses sorted by course ID
+- [BinarySearchTree.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/BinarySearchTree.cpp) - Binary search tree that inserts, searches, removes, and prints courses
+- [Course.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/Course.h) - Holds the data for one course: ID, title, and prerequisites
+- [Project Two.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/Project%20Two.cpp) - Loads the course file, runs the menu, and runs the benchmark
+
+### Original Files
+
+- [Project Two.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Original/Project%20Two.cpp) - The original CS 300 program, all in one file
 
 ## Artifact Description
 
