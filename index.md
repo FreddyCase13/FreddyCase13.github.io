@@ -8,8 +8,6 @@ Welcome to my ePortfolio for CS 499, the Computer Science capstone at Southern N
 
 ## Professional Self-Assessment
 
-Professional Self-Assessment
-
 When I started the Computer Science program at Southern New Hampshire University, I was looking for a career that I would find fulfilling and would fit my personality. When researching a career that would fit my criteria, software engineering stood out to me as checking off those boxes. I completed my bachelor’s degree while working full time. During my time as a student, I got promoted at work to a senior-level management role. I balanced school, work, and family, and that taught me how to manage my time and how to stay focused on long-term goals. My goal after graduating is to start my tech career as a software engineer and to eventually transition into AI and machine learning engineering.
 
 Completing this program and building my ePortfolio has made me more analytical and a better problem solver overall. Going back to projects that I had already completed has shown me how much I have grown. In each artifact, I found problems that I did not notice the first time like finding bugs, inefficient code, and security flaws. Being able to find and fix those problems in my own work and others’ code is one of the biggest skills I gained from this program.
