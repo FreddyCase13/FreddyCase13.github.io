@@ -78,7 +78,7 @@ while (true) {
 
 ### Narrative
 
-- [Download narrative (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/CS499_Freddy_Case_Algorithms_Narrative.docx)
+- [Download narrative (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/raw/main/CS300%20Course%20Planner/CS499_Freddy_Case_Algorithms_Narrative.docx)
 
 ## Artifact Description
 
