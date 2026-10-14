@@ -6,10 +6,13 @@ title: Algorithms and Data Structures
 
 [Back to Home](./)
 
+-Course planner menu loading the course data.
 ![Course planner menu loading the course data](CS300%20Course%20Planner/planner-menu.png)
 
+-Course planner printing the course list and searching for a course.
 ![Course planner printing the course list and searching for a course](CS300%20Course%20Planner/planner-search.png)
 
+-Benchmark results comparing the binary search tree and hash table.
 ![Benchmark results comparing the binary search tree and hash table](CS300%20Course%20Planner/planner-benchmark.png)
 
 *Results vary slightly between runs. The numbers in the Professional Self Assessment and Narrative are from an earlier run, and the pattern is the same.*
@@ -117,3 +120,5 @@ The hardest part of enhancing this artifact was wiring everything together by sp
 I also learned that a hash function matters as much as the hash table. My first version added up the characters in each course ID, but there was an issue where IDs with the same characters in a different order ended up landing in the same bucket. Multiplying the sum by 31 before adding each character made the position of each character matter and ended up cutting the hash table’s search time from 7,395 to 5,217 microseconds. If there were any improvements I would make to this project after this enhancement, it would be returning courses by reference and sizing the table to the amount of data. Overall, this enhancement was a refresher for me since I had only built a hash table once before during the CS 300 class. Going back to that original code and building upon it showed me how much data structure choices matter and how much I have grown as a software engineer.
 
 The feedback that I received from my instructor pointed out that adding a hash table that has separate chaining, improving the binary search tree, and constructing a benchmark shows a clear understanding of how each data structure stores, searches, and removes data. The feedback also states that my performance testing with different workloads gave insight into the strengths and weaknesses of each structure. No changes to my plan were requested by my instructor, which confirmed that my approach was sound. Before publishing the final version, I followed my course's guidance that algorithms should be backed by Big-O notation. I added comments to the insert, search, and remove functions of each data structure regarding its time complexity. I also explained how my benchmark results line up with the Big-O of each data structure. I added in code headers to each file so that other developers can see what each file does and what was enhanced.
+
+[Back to Home](./)
