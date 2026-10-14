@@ -67,6 +67,10 @@ pipeline = [
 - [ProjectTwoDashboard.ipynb](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/Grazioso%20Salvare%20Dashboard/Original/ProjectTwoDashboard.ipynb) - The original CS 340 dashboard.
 - [CRUD_Python_Module.py](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/Grazioso%20Salvare%20Dashboard/Original/CRUD_Python_Module.py) - The original CRUD module.
 
+### Narrative
+
+- [Download narrative (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/Grazioso%20Salvare%20Dashboard)
+
 ## Artifact Description
 
 The artifact that I chose for the database category is my Grazioso Salvare Dashboard from CS 340: Client/Server Development. I took this class last year, and the project was submitted in December 2025. It is a Python dashboard built with Dash and connects to a MongoDB database of animals from the Austin Animal Center. A user can filter the animals by rescue type, select and view the search results in a table, see the results in a pie chart for the most common breeds, and see where a selected animal is on a map.
