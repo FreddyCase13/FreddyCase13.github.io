@@ -76,6 +76,10 @@ while (true) {
 
 - [Project Two.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Original/Project%20Two.cpp) - The original CS 300 program, all in one file.
 
+### Narrative
+
+- [Download narrative (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/CS499_Freddy_Case_Algorithms_Narrative.docx)
+
 ## Artifact Description
 
 The artifact for this category is my Course Planner from CS 300: Data Structures and Algorithms, which was originally written in early 2025. This project is a C++ program that is for a fictional university advising office. It loads data from a CSV file into a Binary Search Tree, then lets the user print every course in order or look up a single course and its prerequisites.
