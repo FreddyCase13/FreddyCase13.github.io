@@ -54,7 +54,7 @@ for (const auto& sceneObject : m_sceneObjects) {
 
 ### Narrative
 
-- [Download narrative (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/CS499_Freddy_Case_Software_Design_Narrative.docx)
+- [Download narrative (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/raw/main/CS%20330%20code/CS499_Freddy_Case_Software_Design_Narrative.docx)
 
 ## Artifact Description
 
