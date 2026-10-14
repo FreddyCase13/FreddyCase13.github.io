@@ -6,6 +6,10 @@ title: Databases
 
 [Back to Home](./)
 
+![The Grazioso Salvare dashboard. Shows the Water Rescue filter selected and the matching animals in the table](Grazioso%20Salvare%20Dashboard/dashboard-table.png)
+
+![The breed chart and the map showing the location of the selected animal](Grazioso%20Salvare%20Dashboard/dashboard-charts.png)
+
 ## Code
 
 ### Key Change: Before and After
