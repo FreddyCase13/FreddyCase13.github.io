@@ -6,13 +6,10 @@ title: Algorithms and Data Structures
 
 [Back to Home](./)
 
--Course planner menu loading the course data.
 ![Course planner menu loading the course data](CS300%20Course%20Planner/planner-menu.png)
 
--Course planner printing the course list and searching for a course.
 ![Course planner printing the course list and searching for a course](CS300%20Course%20Planner/planner-search.png)
 
--Benchmark results comparing the binary search tree and hash table.
 ![Benchmark results comparing the binary search tree and hash table](CS300%20Course%20Planner/planner-benchmark.png)
 
 *Results vary slightly between runs. The numbers in the Professional Self Assessment and Narrative are from an earlier run, and the pattern is the same.*
