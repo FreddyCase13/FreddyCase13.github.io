@@ -69,7 +69,7 @@ pipeline = [
 
 ### Narrative
 
-- [Download narrative (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/Grazioso%20Salvare%20Dashboard)
+- [Download narrative (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/raw/main/Grazioso%20Salvare%20Dashboard/CS499_Freddy_Case_Databases_Narrative.docx)
 
 ## Artifact Description
 
