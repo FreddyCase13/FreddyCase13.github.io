@@ -52,6 +52,10 @@ for (const auto& sceneObject : m_sceneObjects) {
 
 - [Original code folder](https://github.com/FreddyCase13/FreddyCase13.github.io/tree/main/CS%20330%20code/Original) - The CS 330 version before the enhancement
 
+### Narrative
+
+- [Download narrative (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS%20330%20code/CS499_Freddy_Case_Software_Design_Narrative.docx)
+
 ## Artifact Description
 
 The artifact for this category is my 3D desk scene from CS 330: Computational Graphics and Visualization course. This was built in early 2026 and submitted at the end of the February term. This is an OpenGL rendered scene made up of six objects, a coffee mug, a desk, a laptop, a monitor, a mouse, and a notebook. Each object has its own cpp class as well as its own header class. The entire codebase was built on an instructor provided shader and rendering framework which handles the lower-level graphics set up. I then added my own objects, textures, materials and created the desk scene throughout the course.
