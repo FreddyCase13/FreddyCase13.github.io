@@ -12,9 +12,9 @@ title: Databases
 
 ## Code
 
-### Key Change: Before and After
+### Before and After The Enhancements
 
-**Before:** The database username and password were written directly in the dashboard code, in a public repository. The password has since been changed and is shown here as REDACTED.
+**Before:** The database username and password was written directly in the dashboard code within a public repository. The password has since been changed and is shown here as REDACTED.
 
 ```python
 username = "aacuser"
@@ -24,7 +24,7 @@ password = "REDACTED"
 db = AnimalShelter(username, password)
 ```
 
-**After:** Credentials are loaded from a .env file that is never uploaded, and the dashboard connects with a read-only account.
+**After:** Credentials are loaded from a .env file that is never uploaded. The dashboard connects with a read-only account.
 
 ```python
 load_dotenv()
@@ -40,7 +40,7 @@ if not username or not password:
 db = AnimalShelter(username, password)
 ```
 
-**Breed counts now run inside MongoDB** with an aggregation pipeline, instead of sending every record to Python:
+**Breed counts now run inside MongoDB** with an aggregation pipeline nowinstead of sending each record to Python:
 
 ```python
 pipeline = [
