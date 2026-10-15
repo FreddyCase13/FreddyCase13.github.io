@@ -36,7 +36,7 @@ I believe that security is a continuous process that starts when an application 
 
 The three artifacts in my ePortfolio come from different courses and use different languages and tools. My 3D desk scene shows software design in C++ and OpenGL. My course planner shows data structures and algorithms in C++. My Grazioso Salvare dashboard shows databases and security with Python and MongoDB. These artifacts show that I can design software that is easy to maintain, make it efficient, and keep it secure. Each artifact includes the original code, the enhanced code, and a narrative explaining what I changed and what I learned.
 
-- [Download Professional-Self Assessment (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/raw/main/CS499_Freddy_Case_Professional_Self_Assessment.docx)
+- [Download Professional Self-Assessment (Word)](https://github.com/FreddyCase13/FreddyCase13.github.io/raw/main/CS499_Freddy_Case_Professional_Self_Assessment.docx)
 
 ## Contents
 - [Code Review](./code-review)
