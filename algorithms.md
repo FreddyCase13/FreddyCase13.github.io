@@ -12,13 +12,13 @@ title: Algorithms and Data Structures
 
 ![Benchmark results comparing the binary search tree and hash table](CS300%20Course%20Planner/planner-benchmark.png)
 
-*Results vary slightly between runs. The numbers in the Professional Self Assessment and Narrative are from an earlier run, and the pattern is the same.*
+*Results will vary slightly between runs. The numbers in the Professional Self-Assessment and the Database Narrative are from an earlier run. The code is still the same.*
 
 ## Code
 
-### Key Change: Before and After
+### Before and After Enhancements
 
-**Before:** Insert called itself once for every level of the tree. With 2,000 sorted courses the tree was 2,000 levels deep, and the program crashed with a stack overflow.
+**Before:** The Insert method called itself once for every level of the tree. With 2,000 sorted courses the tree was 2,000 levels deep. This caused the program to crash with a stack overflow during the benchmark test.
 
 ```cpp
 void BinarySearchTree::addNode(Node* node, Course course) {
@@ -41,7 +41,7 @@ void BinarySearchTree::addNode(Node* node, Course course) {
 }
 ```
 
-**After:** Insert walks down the tree with a loop, so it uses the same memory no matter how deep the tree gets.
+**After:** The new Insert method walks down the tree with a loop. Therefore, it uses the same amount of memory regardless of how deep the tree gets.
 
 ```cpp
 Node* current = root;
@@ -72,17 +72,17 @@ while (true) {
 
 ### Enhanced Files
 
-- [CourseStore.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/CourseStore.h) - Abstract base class with Insert, Search, and Remove so that the BST and hash table can be tested with the same code.
-- [HashTable.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/HashTable.h) - Declares the hash table that stores courses by using separate chaining.
-- [HashTable.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/HashTable.cpp) - Inserts, searches, and removes courses in the hash table by using 179 buckets and a multiply-by-31 hash.
+- [CourseStore.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/CourseStore.h) - Abstract base class with Insert, Search, and Remove methods so that the BST and hash table can be tested using the same exact code.
+- [HashTable.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/HashTable.h) - Declares the hash table which stores the courses by using separate chaining.
+- [HashTable.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/HashTable.cpp) - Inserts, searches, and removes courses in the hash table by using 179 buckets and a hash that is multiply-by-31.
 - [BinarySearchTree.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/BinarySearchTree.h) - Declares the binary search tree that stores courses sorted by course ID.
 - [BinarySearchTree.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/BinarySearchTree.cpp) - Binary search tree that inserts, searches, removes, and prints courses.
-- [Course.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/Course.h) - Holds the data for one course: ID, title, and prerequisites.
-- [Project Two.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/Project%20Two.cpp) - Loads the course file, runs the menu, and runs the benchmark.
+- [Course.h](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/Course.h) - Holds the data for a course's ID, title, and prerequisites.
+- [Project Two.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Enhanced/Project%20Two.cpp) - Loads the course file, runs the menu, and runs the benchmark test.
 
 ### Original Files
 
-- [Project Two.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Original/Project%20Two.cpp) - The original CS 300 program, all in one file.
+- [Project Two.cpp](https://github.com/FreddyCase13/FreddyCase13.github.io/blob/main/CS300%20Course%20Planner/Original/Project%20Two.cpp) - The original CS 300 program in one file.
 
 ### Narrative
 
